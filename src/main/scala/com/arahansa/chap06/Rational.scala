@@ -8,4 +8,11 @@ class Rational(n:Int, d:Int) {
 
   def add(that: Rational) : Rational =
     new Rational(number * that.denom + that.number * denom, denom * that.denom)
+
+  def lessThan(that: Rational) =
+    this.number * that.denom < that.number * this.denom
+
+  def max(that : Rational) = if(this.lessThan(that)) that else this
+
+
 }
